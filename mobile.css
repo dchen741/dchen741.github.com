@@ -18,14 +18,17 @@ h2 {
 p, li {
     font-family: Helvetica;
     font-size: 14px;
-    height: 150;
-    width: 200;
 }
 
 .center {
     width:100px;
     margin: 0 auto;
     text-align: left;
+}
+
+.image {
+    margin-right: 0;
+    margin-left: 0;
 }
 
 .emphasize {
