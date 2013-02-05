@@ -10,3 +10,4 @@ February 4, 2013
 -Files in special repo
 2. Did not collaborate with anyone
 3. Approximate time: 3 hours
+Note: Tested mobile on iphone4s
