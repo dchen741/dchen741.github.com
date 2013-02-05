@@ -1,10 +1,12 @@
 body {
     background-color: lightgrey;
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
 h1 {
     font-weight: bold;
-    font-size: 60px;
+    font-size: 40px;
 }
 
 h2 {
@@ -41,6 +43,4 @@ p, li {
 .repeat {
     font-family: Helvetiva;
     text-align: center;
-    margin-left: 25%;
-    margin-right: 25%;
 }
