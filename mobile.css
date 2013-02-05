@@ -16,6 +16,8 @@ h2 {
 p, li {
     font-family: Helvetica;
     font-size: 14px;
+    height: 150;
+    width: 200;
 }
 
 .center {
