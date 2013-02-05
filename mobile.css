@@ -1,3 +1,42 @@
 body {
-    background-color: lightgrey
+    background-color: lightgrey;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 60px;
+}
+
+h2 {
+    font-weight: bold;
+    font-family: Helvetica;
+    font-size: 20px;
+}
+
+p, li {
+    font-family: Helvetica;
+    font-size: 14px;
+}
+
+.center {
+    width:100px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.emphasize {
+    font-family: Helvetica;
+    font-style: italic;
+    font-size: 16px;
+}
+
+.normal {
+    font-family: Helvetica
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.repeat {
+    font-family: Helvetiva;
+    text-align: center;
 }
