@@ -1,7 +1,5 @@
 body {
     background-color: lightgrey;
-    margin-left: 25%;
-    margin-right: 25%;
 }
 
 h1 {
@@ -29,6 +27,7 @@ p, li {
 .image {
     margin-right: 0;
     margin-left: 0;
+    overflow: auto;
 }
 
 .emphasize {
