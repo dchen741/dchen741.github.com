@@ -39,4 +39,6 @@ p, li {
 .repeat {
     font-family: Helvetiva;
     text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
 }
