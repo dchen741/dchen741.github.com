@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 
 <html>
-
     <head>
-        <title>Geolocation Map Example</title>
+        <title>YLYL</title>
         <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
         <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true&libraries=places"></script>
 
@@ -30,7 +29,8 @@
 
             function getMyLocation()
             {
-                if (navigator.geolocation) { // the navigator.geolocation object is supported on your browser
+                if (navigator.geolocation) {
+                    alert("hi?");
                     navigator.geolocation.getCurrentPosition(function(position) {
                         myLat = position.coords.latitude;
                         myLng = position.coords.longitude;
@@ -76,7 +76,6 @@
             function callback(results, status)
             {
                 if (status == google.maps.places.PlacesServiceStatus.OK) {
-                    alert("Got places back!");
                     places = results;
                     for (var i = 0; i < results.length; i++) {
                         createMarker(results[i]);
