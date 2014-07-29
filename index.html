@@ -1,21 +1,23 @@
-<!DOCTYPE html>
 <html>
-<head>
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
-    <link rel="stylesheet" href="screen.css" media="print, screen and (min-device-width: 650px)" />
-    <link rel="stylesheet" href="mobile.css" media="only screen and (max-device-width: 651px)" />
-    <title>Dennis Chen</title>
-</head>
-
-<body class="repeat">
-    <h1>Dennis Chen</h1>
-    <p class="image"><img src="itsme.jpg" width="300" height="300" alt="hehe" /></p>
-    <p>Links<p>
-    <ul>
-        <li class="center"><a href="resume.html"> Resume </a><br/></li>
-        <li class="center"><a href="bio.html"> Bio </a></li>
-    </ul>
-</body>
-
-
+    <head>
+        <title> Dennis J. Chen </title>
+        <link href="bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="bootstrap.min.js"></script>
+        <script src="angular.min.js"></script>
+        <script src="angular-ui-router.min.js"></script>
+        <script src="app.js"></script>
+        <meta charset="utf-8">
+        <link rel="icon" href="images/DC.png" type="image/png">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+    </head>	
+    <body ng-app="DCWeb">
+        <div class="col-xs-0 col-md-1"></div>
+        <div class="col-xs-12 col-md-10 container">
+            <div ui-view></div>
+        </div>
+        <div class="col-xs-0 col-md-1"></div>
+    </body>
 </html>
