@@ -1,0 +1,29 @@
+h2, h4, h6 {
+	font-family: Verdana;
+	color: #2B2B2B
+	word-wrap: break-word;
+}
+
+#aboutSpacing {
+	line-height: 2;
+}
+
+.DC_wellSize{
+ height: 65%; 
+}
+
+/*Small Devices*/
+@media (max-width: 767px){
+	#DC_Home {
+		padding-top: 5%;
+	}
+}
+
+/*Medium Size devices (desktops)*/
+@media (min-width: 768px){
+
+	#DC_Home {
+		padding-top: 10%;
+	}
+
+}
