@@ -4,6 +4,14 @@ h2, h3, h4, h5, h6 {
 	word-wrap: break-word;
 }
 
+.DC_font{
+	font-family: Verdana;
+}
+
+.DC_fontColor{
+	color:#2B2B2B;
+}
+
 #aboutSpacing {
 	line-height: 2;
 }
