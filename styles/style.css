@@ -45,6 +45,7 @@ h2, h3, h4, h5, h6 {
 	color: #2B2B2B;
 	cursor: pointer;
 	border-radius: 0;
+	background-color: transparent;
 }
 .btnDC,
 .btnDC:active,
