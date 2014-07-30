@@ -59,7 +59,7 @@ fieldset[disabled] .btnDC {
 .btnDC:hover,
 .btnDC:focus,
 .btnDC:active {
-	color: #FFFFFF;
+	color: #000000;
  	border-color: transparent;
 }
 .btnDC:hover,
