@@ -8,8 +8,11 @@ h2, h3, h4, h5, h6 {
 	line-height: 2;
 }
 
-.DC_wellSize{
- height: 65%; 
+.DC_container-fluid {
+  padding-right: 3%;
+  padding-left: 3%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /*Small Devices*/
@@ -23,7 +26,7 @@ h2, h3, h4, h5, h6 {
 @media (min-width: 768px){
 
 	#DC_Home {
-		padding-top: 10%;
+		padding-top: 5%;
 	}
 
 }
