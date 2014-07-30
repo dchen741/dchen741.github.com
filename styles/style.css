@@ -4,10 +4,6 @@ h2, h3, h4, h5, h6 {
 	word-wrap: break-word;
 }
 
-.btnDC {
-	color: #2B2B2B;
-}
-
 .DC_fontColor {
 	color: #2B2B2B;
 }
@@ -37,4 +33,44 @@ h2, h3, h4, h5, h6 {
 		padding-top: 5%;
 	}
 
+}
+
+
+/**************************************
+ ************** Buttons ***************
+ **************************************/
+
+.btnDC {
+	font-weight: normal;
+	color: #2B2B2B;
+	cursor: pointer;
+	border-radius: 0;
+}
+.btnDC,
+.btnDC:active,
+.btnDC[disabled],
+fieldset[disabled] .btnDC {
+ 	background-color: transparent;
+	-webkit-box-shadow: none;
+        box-shadow: none;
+}
+.btnDC,
+.btnDC:hover,
+.btnDC:focus,
+.btnDC:active {
+	color: #000000;
+ 	border-color: transparent;
+}
+.btnDC:hover,
+.btnDC:focus {
+	color: #2a6496;
+	text-decoration: underline;
+	background-color: transparent;
+}
+.btnDC[disabled]:hover,
+fieldset[disabled] .btnDC:hover,
+.btnDC[disabled]:focus,
+fieldset[disabled] .btnDC:focus {
+	color: #777;
+	text-decoration: none;
 }
