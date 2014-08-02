@@ -7,6 +7,12 @@ h2, h3, h4, h5, h6 {
 	word-wrap: break-word;
 }
 
+.DC_center {
+    display:table-cell;
+    vertical-align:middle;
+    float:none;
+}
+
 .DC_fontColor {
 	color: #2B2B2B;
 }
