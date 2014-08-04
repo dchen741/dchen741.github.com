@@ -8,9 +8,10 @@ h2, h3, h4, h5, h6 {
 }
 
 .DC_center {
-    display:table-cell;
-    vertical-align:middle;
     float:none;
+    display:inline-block;
+    vertical-align:middle;
+    margin-right:-4px;
 }
 
 .DC_fontColor {
