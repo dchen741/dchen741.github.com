@@ -39,7 +39,7 @@
         Parse.initialize("ASMRRN5iWBqYCX4xmWqE4WVfFexRuVhDuEudAOgh","ilpKJp7jgCw4L9XBQ6DEUaYVXOxy4iu8QPqEZZ7g");
         var Thing = Parse.Object.extend("iPhoneQuizApp");
         var query = new Parse.Query(Thing);
-        query.get("aIQNpgydyV", {
+        query.get("OMh1TcTdO2", {
             success: function(ariThing) {
                 console.log(ariThing._serverData);
                 Table("#CorrectTable", ariThing._serverData.correctAnswerArray, ariThing._serverData.correctDateArray, ariThing._serverData.correctJOLArray);
