@@ -18,32 +18,103 @@
                 <h1>ARI Database</h1>
             </div>
         </div>
-        <div class="row">
-            <h2>Dante</h2>
+
+        <!-- ********** DANTE'S STUFF ************** -->
+        <div class="jumbotron">
+            <div class="row">
+                <h2>Dante</h2>
+            </div>
+            <div class="row">
+                <h4>Correct Questions</h4>
+            </div>
+            <div class="row">
+                <div id="danteCorrectTable"><span>There are no correct questions available.</span></div>
+            </div>
+            <div class="row">
+                <h4>Incorrect Questions</h4>
+            </div>
+            <div class="row">
+                <div id="danteIncorrectTable"><span>There are no incorrect questions available.</span></div>
+            </div>
         </div>
-        <div class="row">
-            <h4>Correct Questions</h4>
+        <!-- ********** END  ************** -->
+
+        <!-- ********** LAURA'S STUFF ************** -->
+        <div class="jumbotron">
+            <div class="row">
+                <h2>Laura</h2>
+            </div>
+            <div class="row">
+                <h4>Correct Questions</h4>
+            </div>
+            <div class="row">
+                <div id="lauraCorrectTable"><span>There are no correct questions available.</span></div>
+            </div>
+            <div class="row">
+                <h4>Incorrect Questions</h4>
+            </div>
+            <div class="row">
+                <div id="lauraIncorrectTable"><span>There are no incorrect questions available.</span></div>
+            </div>
         </div>
-        <div class="row">
-            <div id="CorrectTable"><span>There are no correct questions available.</span></div>
+        <!-- ********** END  ************** -->
+
+        <!-- ********** EVA'S STUFF ************** -->
+        <div class="jumbotron">
+            <div class="row">
+                <h2>Eva</h2>
+            </div>
+            <div class="row">
+                <h4>Correct Questions</h4>
+            </div>
+            <div class="row">
+                <div id="evaCorrectTable"><span>There are no correct questions available.</span></div>
+            </div>
+            <div class="row">
+                <h4>Incorrect Questions</h4>
+            </div>
+            <div class="row">
+                <div id="evaIncorrectTable"><span>There are no incorrect questions available.</span></div>
+            </div>
         </div>
-        <div class="row">
-            <h4>Incorrect Questions</h4>
-        </div>
-        <div class="row">
-            <div id="IncorrectTable"><span>There are no incorrect questions available.</span></div>
-        </div>
+        <!-- ********** END  ************** -->
+
     </div>
     <script type="text/javascript">
         tempString = [];
         Parse.initialize("ASMRRN5iWBqYCX4xmWqE4WVfFexRuVhDuEudAOgh","ilpKJp7jgCw4L9XBQ6DEUaYVXOxy4iu8QPqEZZ7g");
         var Thing = Parse.Object.extend("iPhoneQuizApp");
         var query = new Parse.Query(Thing);
+        //DANTE
         query.get("OMh1TcTdO2", {
             success: function(ariThing) {
                 console.log(ariThing._serverData);
-                Table("#CorrectTable", ariThing._serverData.correctAnswerArray, ariThing._serverData.correctDateArray, ariThing._serverData.correctJOLArray);
-                Table("#IncorrectTable", ariThing._serverData.incorrectAnswerArray, ariThing._serverData.incorrectDateArray, ariThing._serverData.incorrectJOLArray);
+                Table("#danteCorrectTable", ariThing._serverData.correctAnswerArray, ariThing._serverData.correctDateArray, ariThing._serverData.correctJOLArray);
+                Table("#danteIncorrectTable", ariThing._serverData.incorrectAnswerArray, ariThing._serverData.incorrectDateArray, ariThing._serverData.incorrectJOLArray);
+            },
+            error: function(object, error) {
+                console.log("no");
+            }
+        });
+
+        //LAURA
+        query.get("t3wCj7UZ7U", {
+            success: function(ariThing) {
+                console.log(ariThing._serverData);
+                Table("#lauraCorrectTable", ariThing._serverData.correctAnswerArray, ariThing._serverData.correctDateArray, ariThing._serverData.correctJOLArray);
+                Table("#lauraIncorrectTable", ariThing._serverData.incorrectAnswerArray, ariThing._serverData.incorrectDateArray, ariThing._serverData.incorrectJOLArray);
+            },
+            error: function(object, error) {
+                console.log("no");
+            }
+        });
+
+        //EVA
+        query.get("oTyFMbaZC6", {
+            success: function(ariThing) {
+                console.log(ariThing._serverData);
+                Table("#evaCorrectTable", ariThing._serverData.correctAnswerArray, ariThing._serverData.correctDateArray, ariThing._serverData.correctJOLArray);
+                Table("#evaIncorrectTable", ariThing._serverData.incorrectAnswerArray, ariThing._serverData.incorrectDateArray, ariThing._serverData.incorrectJOLArray);
             },
             error: function(object, error) {
                 console.log("no");
