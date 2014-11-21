@@ -53,11 +53,16 @@
         //Make Tables
         function Table(questionType, answerArray, dateArray, jolArray) {
             var table = '<table class="table table-bordered table-condensed"><thead><tr><th>Question Number</th><th>JOL</th><th>Question Date</th></tr></thead><tbody>';
-            console.log(answerArray);
             numAnswers = answerArray.length;
-            for (var i=0;i<numAnswers;i++) {
-                var row = "<tr><td>"+String(answerArray[i])+"</td><td>"+jolArray[i]+"</td><td>"+dateArray[i]+"</tr>"
-                table += row;
+            if(numAnswers == 0){
+                var row = "<tr><td>N/A</td><td>N/A</td><td>N/A</td></tr>";
+                table+=row;
+            }
+            else{
+                for (var i=0;i<numAnswers;i++) {
+                    var row = "<tr><td>"+String(answerArray[i])+"</td><td>"+jolArray[i]+"</td><td>"+dateArray[i]+"</tr>";
+                    table += row;
+                }
             }
             table += '</table>';
             $(questionType).html(table);
