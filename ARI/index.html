@@ -131,22 +131,16 @@
             }
             else{
                 for (var i=0;i<numAnswers;i++) {
-                    var row = "<tr><td>"+String(answerArray[i])+"</td><td>"+jolArray[i]+"</td><td>"+dateArray[i]+"</tr>";
+                    var row = "<tr><td>"+String(answerArray[i])+"</td><td>"+jolArray[i]+"</td><td>"+date.setHours(dateArray[i])+"</tr>";
                     table += row;
                 }
             }
             table += '</table>';
             $(questionType).html(table);
-            // $('#CorrectTable').tooltip({
-            //     'show': true,
-            //     'selector':'.staff-row',
-            //     'placement': 'bottom',
-            //     'title': function(event){
-            //         var $this=$(this);
-            //         var tds=$this.find('td');            
-            //         return $(tds[0]).text()+" "+$(tds[1]).text()+" age: "+$this.attr("age");
-            //     },        
-            // });
+        }
+        function addHours(date){
+            date.setHours(date.getHours() + 5);
+            return date;
         }
     </script>
 </body>
