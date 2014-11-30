@@ -25,6 +25,12 @@
                 <h2>Dante</h2>
             </div>
             <div class="row">
+                <h4>Question Pool</h4>
+            </div>
+            <div class="row">
+                <div id="dantePool"><span>There are no questions available.</span></div>
+            </div>
+            <div class="row">
                 <h4>Correct Questions</h4>
             </div>
             <div class="row">
@@ -45,6 +51,12 @@
                 <h2>Laura</h2>
             </div>
             <div class="row">
+                <h4>Question Pool</h4>
+            </div>
+            <div class="row">
+                <div id="lauraPool"><span>There are no questions available.</span></div>
+            </div>
+            <div class="row">
                 <h4>Correct Questions</h4>
             </div>
             <div class="row">
@@ -63,6 +75,12 @@
         <div class="jumbotron">
             <div class="row">
                 <h2>Eva</h2>
+            </div>
+            <div class="row">
+                <h4>Question Pool</h4>
+            </div>
+            <div class="row">
+                <div id="evaPool"><span>There are no questions available.</span></div>
             </div>
             <div class="row">
                 <h4>Correct Questions</h4>
@@ -89,6 +107,7 @@
         query.get("OMh1TcTdO2", {
             success: function(ariThing) {
                 console.log(ariThing._serverData);
+                QuestionPool('#dantePool', ariThing._serverData.questionPoolArray);
                 Table("#danteCorrectTable", ariThing._serverData.correctAnswerArray, ariThing._serverData.correctDateArray, ariThing._serverData.correctJOLArray);
                 Table("#danteIncorrectTable", ariThing._serverData.incorrectAnswerArray, ariThing._serverData.incorrectDateArray, ariThing._serverData.incorrectJOLArray);
             },
@@ -101,6 +120,7 @@
         query.get("t3wCj7UZ7U", {
             success: function(ariThing) {
                 console.log(ariThing._serverData);
+                QuestionPool('#lauraPool', ariThing._serverData.questionPoolArray);
                 Table("#lauraCorrectTable", ariThing._serverData.correctAnswerArray, ariThing._serverData.correctDateArray, ariThing._serverData.correctJOLArray);
                 Table("#lauraIncorrectTable", ariThing._serverData.incorrectAnswerArray, ariThing._serverData.incorrectDateArray, ariThing._serverData.incorrectJOLArray);
             },
@@ -113,6 +133,7 @@
         query.get("oTyFMbaZC6", {
             success: function(ariThing) {
                 console.log(ariThing._serverData);
+                QuestionPool('#evaPool', ariThing._serverData.questionPoolArray);
                 Table("#evaCorrectTable", ariThing._serverData.correctAnswerArray, ariThing._serverData.correctDateArray, ariThing._serverData.correctJOLArray);
                 Table("#evaIncorrectTable", ariThing._serverData.incorrectAnswerArray, ariThing._serverData.incorrectDateArray, ariThing._serverData.incorrectJOLArray);
             },
@@ -121,6 +142,12 @@
             }
         });
 
+        function QuestionPool(questionType, questionPoolArray){
+            var pool = '<p>';
+            pool += questionPoolArray;
+            pool += '</p>';
+            $(questionType).html(pool);
+        }
         //Make Tables
         function Table(questionType, answerArray, dateArray, jolArray) {
             var table = '<table class="table table-bordered table-condensed"><thead><tr><th>Question Number</th><th>JOL</th><th>Question Date</th></tr></thead><tbody>';
