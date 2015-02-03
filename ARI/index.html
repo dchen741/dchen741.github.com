@@ -197,32 +197,32 @@
             console.log(numContests);
             if (numContests == 0){
                 var row = "<tr><td>N/A</td><td>N/A</td></tr>";
-                table+=row;
+                contestTable+=row;
             }
             else{
                 for (var i=0; i<incorrect.length;i++){
                     var row = "<tr><td>"+String(incorrect[i])+"</td><td>"+"contestIncorrect"+"</td></tr>";
-                    table += row;
+                    contestTable += row;
                 }
                 for (var i=0; i<obsolete.length;i++){
                     var row = "<tr><td>"+String(obsolete[i])+"</td><td>"+"contestObsolete"+"</td></tr>";
-                    table += row;
+                    contestTable += row;
                 }
                 for (var i=0; i<mispelled.length;i++){
                     var row = "<tr><td>"+String(mispelled[i])+"</td><td>"+"contestMispelled"+"</td></tr>";
-                    table += row;
+                    contestTable += row;
                 }
                 for (var i=0; i<correct.length;i++){
                     var row = "<tr><td>"+String(correct[i])+"</td><td>"+"contestCorrect"+"</td></tr>";
-                    table += row;
+                    contestTable += row;
                 }
                 for (var i=0; i<answers.length;i++){
                     var row = "<tr><td>"+String(answers[i])+"</td><td>"+"contestAnswer"+"</td></tr>";
-                    table += row;
+                    contestTable += row;
                 }
                 for (var i=0; i<bad.length;i++){
                     var row = "<tr><td>"+String(bad[i])+"</td><td>"+"badQuestion"+"</td></tr>";
-                    table += row;
+                    contestTable += row;
                 }
             }
             contestTable += '</table>';
