@@ -42,6 +42,9 @@
             <div class="row">
                 <div id="danteIncorrectTable"><span>There are no incorrect questions available.</span></div>
             </div>
+            <div class="row">
+                <div id="danteContestTable"><span>There are no contests available.</span></div>
+            </div>
         </div>
         <!-- ********** END  ************** -->
 
@@ -67,6 +70,9 @@
             </div>
             <div class="row">
                 <div id="lauraIncorrectTable"><span>There are no incorrect questions available.</span></div>
+            </div>
+            <div class="row">
+                <div id="lauraContestTable"><span>There are no contests available.</span></div>
             </div>
         </div>
         <!-- ********** END  ************** -->
@@ -94,6 +100,9 @@
             <div class="row">
                 <div id="evaIncorrectTable"><span>There are no incorrect questions available.</span></div>
             </div>
+            <div class="row">
+                <div id="evaContestTable"><span>There are no contests available.</span></div>
+            </div>
         </div>
         <!-- ********** END  ************** -->
 
@@ -110,6 +119,7 @@
                 QuestionPool('#dantePool', ariThing._serverData.questionPoolArray);
                 Table("#danteCorrectTable", ariThing._serverData.correctAnswerArray, ariThing._serverData.correctDateArray, ariThing._serverData.correctJOLArray);
                 Table("#danteIncorrectTable", ariThing._serverData.incorrectAnswerArray, ariThing._serverData.incorrectDateArray, ariThing._serverData.incorrectJOLArray);
+                makeContest("#danteContestTable", ariThing._serverData.contestIncorrect, ariThing._serverData.contestObsolete, ariThing._serverData.contestMispelled, ariThing._serverData.contestCorrect, ariThing._serverData.contestAnswers, ariThing._serverData.badQuestion);
             },
             error: function(object, error) {
                 console.log("no");
@@ -123,6 +133,7 @@
                 QuestionPool('#lauraPool', ariThing._serverData.questionPoolArray);
                 Table("#lauraCorrectTable", ariThing._serverData.correctAnswerArray, ariThing._serverData.correctDateArray, ariThing._serverData.correctJOLArray);
                 Table("#lauraIncorrectTable", ariThing._serverData.incorrectAnswerArray, ariThing._serverData.incorrectDateArray, ariThing._serverData.incorrectJOLArray);
+                makeContest("#lauraContestTable", ariThing._serverData.contestIncorrect, ariThing._serverData.contestObsolete, ariThing._serverData.contestMispelled, ariThing._serverData.contestCorrect, ariThing._serverData.contestAnswers, ariThing._serverData.badQuestion);
             },
             error: function(object, error) {
                 console.log("no");
@@ -136,6 +147,7 @@
                 QuestionPool('#evaPool', ariThing._serverData.questionPoolArray);
                 Table("#evaCorrectTable", ariThing._serverData.correctAnswerArray, ariThing._serverData.correctDateArray, ariThing._serverData.correctJOLArray);
                 Table("#evaIncorrectTable", ariThing._serverData.incorrectAnswerArray, ariThing._serverData.incorrectDateArray, ariThing._serverData.incorrectJOLArray);
+                makeContest("#evaContestTable", ariThing._serverData.contestIncorrect, ariThing._serverData.contestObsolete, ariThing._serverData.contestMispelled, ariThing._serverData.contestCorrect, ariThing._serverData.contestAnswers, ariThing._serverData.badQuestion);
             },
             error: function(object, error) {
                 console.log("no");
@@ -169,6 +181,42 @@
             console.log(date);
             date.setHours(date.getHours() + 5);
             return date;
+        }
+        function makeContest(personType, incorrect, obsolete, mispelled, correct, answers, bad){
+            var contestTable = '<table class="table table-bordered table-condensed"><thead><tr><th>Question Number</th><th>Type of Contest</th></tr></thead><tbody>';
+            numContests = incorrect.length + obsolete.length + mispelled.length + correct.length + answers.length + bad.length;
+            if (numContests == 0){
+                var row = "<tr><td>N/A</td><td>N/A</td></tr>";
+                table+=row;
+            }
+            else{
+                for (var i=0; i<incorrect.length;i++){
+                    var row = "<tr><td>"+String(incorrect[i])+"</td><td>"+"contestIncorrect"+"</td></tr>";
+                    table += row;
+                }
+                for (var i=0; i<obsolete.length;i++){
+                    var row = "<tr><td>"+String(obsolete[i])+"</td><td>"+"contestObsolete"+"</td></tr>";
+                    table += row;
+                }
+                for (var i=0; i<mispelled.length;i++){
+                    var row = "<tr><td>"+String(mispelled[i])+"</td><td>"+"contestMispelled"+"</td></tr>";
+                    table += row;
+                }
+                for (var i=0; i<correct.length;i++){
+                    var row = "<tr><td>"+String(correct[i])+"</td><td>"+"contestCorrect"+"</td></tr>";
+                    table += row;
+                }
+                for (var i=0; i<answers.length;i++){
+                    var row = "<tr><td>"+String(answers[i])+"</td><td>"+"contestAnswer"+"</td></tr>";
+                    table += row;
+                }
+                for (var i=0; i<bad.length;i++){
+                    var row = "<tr><td>"+String(bad[i])+"</td><td>"+"badQuestion"+"</td></tr>";
+                    table += row;
+                }
+            }
+            table += '</table>';
+            $(personType).html(contestTable);
         }
     </script>
 </body>
