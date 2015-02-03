@@ -194,6 +194,7 @@
         function makeContest(personType, incorrect, obsolete, mispelled, correct, answers, bad){
             var contestTable = '<table class="table table-bordered table-condensed"><thead><tr><th>Question Number</th><th>Type of Contest</th></tr></thead><tbody>';
             numContests = incorrect.length + obsolete.length + mispelled.length + correct.length + answers.length + bad.length;
+            console.log(numContests);
             if (numContests == 0){
                 var row = "<tr><td>N/A</td><td>N/A</td></tr>";
                 table+=row;
