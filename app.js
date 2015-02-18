@@ -7,13 +7,13 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
   	$urlRouterProvider.otherwise('/');
   
   	// Now set up the states
-  	$urlRouterProvider.when('', '');
-  	$urlRouterProvider.when('/', '/home');
-  	$urlRouterProvider.otherwise('/home'); 	
+  	$urlRouterProvider.when('', '/DC/home');
+  	$urlRouterProvider.when('/', '/DC/home');
+  	$urlRouterProvider.otherwise('/DC/home'); 	
   	$stateProvider
     	.state('index', {
     		abstract: true,
-      		url: '/',
+      		url: '/DC',
       		templateUrl: 'DC_spine.html'
     	})
     	.state('index.home', {
