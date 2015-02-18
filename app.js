@@ -7,7 +7,7 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
   	$urlRouterProvider.otherwise('/');
   
   	// Now set up the states
-  	$urlRouterProvider.when('', '/home');
+  	$urlRouterProvider.when('', '');
   	$urlRouterProvider.when('/', '/home');
   	$urlRouterProvider.otherwise('/home'); 	
   	$stateProvider
