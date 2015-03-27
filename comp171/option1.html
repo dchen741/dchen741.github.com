@@ -8,15 +8,94 @@
     <link href="../styles/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <link href="../styles/style.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
     <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.3.1.min.js"></script>
 </head>
 
 <body>
     <div class="container">
-        <div class="well">...</div>
+        <div class="row">
+            <div class="well">
+                <h1>Please answer the following questions.</h1>
+
+                <!-- Question 1 -->
+                <p>What year is it?</p>
+                <div class="btn-group" data-toggle="buttons">
+                  <label class="btn btn-primary">
+                    <input type="radio" name="options" id="option1" autocomplete="off"> 2010
+                  </label>
+                  <label class="btn btn-primary">
+                    <input type="radio" name="options" id="option2" autocomplete="off"> 2013
+                  </label>
+                  <label class="btn btn-primary">
+                    <input type="radio" name="options" id="option3" autocomplete="off"> 2015
+                  </label>
+                  <label class="btn btn-primary">
+                    <input type="radio" name="options" id="option3" autocomplete="off"> 2014
+                  </label>
+                </div>
+                <br></br>
+
+                <!-- Question 2 -->
+                <p>What school are you at?</p>
+                <div class="btn-group" data-toggle="buttons">
+                  <label class="btn btn-primary">
+                    <input type="radio" name="options" id="option1" autocomplete="off"> BU
+                  </label>
+                  <label class="btn btn-primary">
+                    <input type="radio" name="options" id="option2" autocomplete="off"> Tufts
+                  </label>
+                  <label class="btn btn-primary">
+                    <input type="radio" name="options" id="option3" autocomplete="off"> Northeastern
+                  </label>
+                  <label class="btn btn-primary">
+                    <input type="radio" name="options" id="option3" autocomplete="off"> Harvard
+                  </label>
+                </div>
+                <br></br>
+
+                <!-- Question 3 -->
+                <p>New England has ___ seasons.</p>
+                <div class="btn-group" data-toggle="buttons">
+                  <label class="btn btn-primary">
+                    <input type="radio" name="options" id="option1" autocomplete="off"> 1
+                  </label>
+                  <label class="btn btn-primary">
+                    <input type="radio" name="options" id="option2" autocomplete="off"> 2
+                  </label>
+                  <label class="btn btn-primary">
+                    <input type="radio" name="options" id="option3" autocomplete="off"> 3
+                  </label>
+                  <label class="btn btn-primary">
+                    <input type="radio" name="options" id="option3" autocomplete="off"> 4
+                  </label>
+                </div>
+                <br></br>
+
+                <!-- Question 4 -->
+                <p>What is 5x5?</p>
+                <div class="btn-group" data-toggle="buttons">
+                  <label class="btn btn-primary">
+                    <input type="radio" name="options" id="option1" autocomplete="off"> 25
+                  </label>
+                  <label class="btn btn-primary">
+                    <input type="radio" name="options" id="option2" autocomplete="off"> 20
+                  </label>
+                  <label class="btn btn-primary">
+                    <input type="radio" name="options" id="option3" autocomplete="off"> 30
+                  </label>
+                  <label class="btn btn-primary">
+                    <input type="radio" name="options" id="option3" autocomplete="off"> 15
+                  </label>
+                </div>
+                <br></br>
+
+                <p>
+                    <button type="button" href="finished" class="btn btn-success">Finish</button>
+                </p>
+            </div>
+        </div>
     </div>
-    <script type="text/javascript">
-    </script>
 </body>
 
 </html>
