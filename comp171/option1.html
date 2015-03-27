@@ -27,11 +27,11 @@
                   <label class="btn btn-primary">
                     <input type="radio" name="options" id="option2" autocomplete="off"> 2013
                   </label>
-                  <label class="btn btn-primary">
-                    <input type="radio" name="options" id="option3" autocomplete="off"> 2015
+                  <label class="btn btn-primary" id="optionCorrect">
+                    <input type="radio" name="options" autocomplete="off"> 2015
                   </label>
                   <label class="btn btn-primary">
-                    <input type="radio" name="options" id="option3" autocomplete="off"> 2014
+                    <input type="radio" name="options" id="option4" autocomplete="off"> 2014
                   </label>
                 </div>
                 <br></br>
@@ -43,7 +43,7 @@
                     <input type="radio" name="options" id="option1" autocomplete="off"> BU
                   </label>
                   <label class="btn btn-primary">
-                    <input type="radio" name="options" id="option2" autocomplete="off"> Tufts
+                    <input type="radio" name="options" id="optionCorrect" autocomplete="off"> Tufts
                   </label>
                   <label class="btn btn-primary">
                     <input type="radio" name="options" id="option3" autocomplete="off"> Northeastern
@@ -67,7 +67,7 @@
                     <input type="radio" name="options" id="option3" autocomplete="off"> 3
                   </label>
                   <label class="btn btn-primary">
-                    <input type="radio" name="options" id="option3" autocomplete="off"> 4
+                    <input type="radio" name="options" id="optionCorrect" autocomplete="off"> 4
                   </label>
                 </div>
                 <br></br>
@@ -76,7 +76,7 @@
                 <p>What is 5x5?</p>
                 <div class="btn-group" data-toggle="buttons">
                   <label class="btn btn-primary">
-                    <input type="radio" name="options" id="option1" autocomplete="off"> 25
+                    <input type="radio" name="options" id="optionCorrect" autocomplete="off"> 25
                   </label>
                   <label class="btn btn-primary">
                     <input type="radio" name="options" id="option2" autocomplete="off"> 20
@@ -87,15 +87,65 @@
                   <label class="btn btn-primary">
                     <input type="radio" name="options" id="option3" autocomplete="off"> 15
                   </label>
+                  <label class="btn btn-primary">
+                    <input type="radio" name="options" id="option3" autocomplete="off"> 0
+                  </label>
                 </div>
                 <br></br>
 
-                <p>
-                    <button type="button" href="finished" class="btn btn-success">Finish</button>
-                </p>
+                <!-- Question 5 -->
+                <p>Who is coming for Tufts Spring Break?</p>
+                <div class="btn-group" data-toggle="buttons">
+                  <label class="btn btn-primary">
+                    <input type="radio" name="options" id="optionCorrect" autocomplete="off"> Black-Eyed Peas
+                  </label>
+                  <label class="btn btn-primary">
+                    <input type="radio" name="options" id="option2" autocomplete="off"> One Direction
+                  </label>
+                  <label class="btn btn-primary">
+                    <input type="radio" name="options" id="option3" autocomplete="off"> Rihanna
+                  </label>
+                  <label class="btn btn-primary">
+                    <input type="radio" name="options" id="option3" autocomplete="off"> All-American Rejects
+                  </label>
+                  <label class="btn btn-primary">
+                    <input type="radio" name="options" id="option3" autocomplete="off"> Boyce-Avenue
+                  </label>
+                  <label class="btn btn-primary">
+                    <input type="radio" name="options" id="option3" autocomplete="off"> Jason Derulo
+                  </label>
+                  <label class="btn btn-primary">
+                    <input type="radio" name="options" id="option3" autocomplete="off"> Carly Rae Jepsen
+                  </label>
+                  <label class="btn btn-primary">
+                    <input type="radio" name="options" id="option3" autocomplete="off"> Ke$ha
+                  </label>
+                  <label class="btn btn-primary">
+                    <input type="radio" name="options" id="option3" autocomplete="off"> Fountains of Wayne
+                  </label>
+                  <label class="btn btn-primary">
+                    <input type="radio" name="options" id="option3" autocomplete="off"> Ingrid Michaelson
+                  </label>
+                </div>
+                <br></br>
+
+                <form>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">How many times did you select the first option?</label>
+                    <input type="text" class="form-control" id="answers">
+                  </div>
+                  <a type="submit" href="finished.html" class="btn btn-success">Submit</a>
+                </form>
             </div>
         </div>
     </div>
+    <script>
+      var numCorrect = 0;
+      $('#optionCorrect').on('click', function () {
+        numCorrect = numCorrect+1;
+        console.log(numCorrect);
+      })
+    </script>
 </body>
 
 </html>
