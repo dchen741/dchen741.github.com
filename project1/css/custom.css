@@ -4,6 +4,54 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+@font-face {
+    font-family: Dense-Regular;
+    src: url(../fonts/Dense-Regular.otf);
+}
+
+@font-face {
+    font-family: Nexa-Bold;
+    src: url(../fonts/nexa/Nexa-Bold.otf);
+}
+
+@font-face {
+    font-family: Nexa-Light;
+    src: url(../fonts/nexa/Nexa-Light.otf);
+}
+
+@font-face {
+    font-family: Biko_Black;
+    src: url(../fonts/biko/Biko_Black.otf);
+}
+
+@font-face {
+    font-family: Futura-Koyu;
+    src: url(../fonts/Futura-Koyu.ttf);
+}
+
+.futura-font {
+    font-family: Futura-Koyu;
+}
+
+.nexa-bold {
+    font-family: Nexa-Bold;
+}
+
+.dense-regular{
+    font-family: Dense-Regular;
+    font-size: 24px;
+}
+
+#carouselButtons {
+    margin-left: 48%;
+    position: absolute;
+    bottom: 50px;
+}
+
+span.glyphicon-download {
+    font-size: 2.0em;
+}
+
 html,
 body {
     height: 100%;
@@ -17,6 +65,10 @@ body {
 
 .carousel-inner {
     height: 100%;
+}
+
+.carousel-caption {
+    margin-bottom: 250px;
 }
 
 /* Background images are set within the HTML using inline CSS, not here */
