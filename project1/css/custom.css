@@ -2,6 +2,8 @@
  * Start Bootstrap - Full Slider HTML Template (http://startbootstrap.com)
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ *
+ * Note: #000000 used to be #000000;
  */
 
 @font-face {
@@ -46,7 +48,65 @@
     margin-left: 48%;
     position: absolute;
     bottom: 50px;
+    opacity: 50;
 }
+
+/*
+inspired from http://codepen.io/Rowno/pen/Afykb 
+*/
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 1.5s;
+}
+
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+/*
+WHAT IS NEW IN 3.3: "Added transforms to improve carousel performance in modern browsers."
+now override the 3.3 new styles for modern browsers & apply opacity
+*/
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,
+    .carousel-fade .carousel-inner > .item.active.right {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.prev,
+    .carousel-fade .carousel-inner > .item.active.left {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.next.left,
+    .carousel-fade .carousel-inner > .item.prev.right,
+    .carousel-fade .carousel-inner > .item.active {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+}
+
+/* END CAROUSEL*/
 
 span.glyphicon-download {
     font-size: 2.0em;
@@ -93,7 +153,7 @@ body {
 
 hr {
     max-width: 50px;
-    border-color: #f05f40;
+    border-color: #000000;
     border-width: 3px;
 }
 
@@ -102,7 +162,7 @@ hr.light {
 }
 
 a {
-    color: #f05f40;
+    color: #000000;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -129,7 +189,11 @@ p {
 }
 
 .bg-primary {
-    background-color: #f05f40;
+    background-color: #000000;
+}
+
+.bg-grey {
+    background-color: #E8E8E8;
 }
 
 .bg-dark {
@@ -166,7 +230,7 @@ aside {
     text-transform: uppercase;
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
     font-weight: 700;
-    color: #f05f40;
+    color: #000000;
 }
 
 .navbar-default .navbar-header .navbar-brand:hover,
@@ -184,12 +248,12 @@ aside {
 
 .navbar-default .nav > li>a:hover,
 .navbar-default .nav>li>a:focus:hover {
-    color: #f05f40;
+    color: #000000;
 }
 
 .navbar-default .nav > li.active>a,
 .navbar-default .nav>li.active>a:focus {
-    color: #f05f40!important;
+    color: #000000!important;
     background-color: transparent;
 }
 
@@ -230,7 +294,7 @@ aside {
 
     .navbar-default.affix .navbar-header .navbar-brand {
         font-size: 14px;
-        color: #f05f40;
+        color: #000000;
     }
 
     .navbar-default.affix .navbar-header .navbar-brand:hover,
@@ -245,7 +309,7 @@ aside {
 
     .navbar-default.affix .nav > li>a:hover,
     .navbar-default.affix .nav>li>a:focus:hover {
-        color: #f05f40;
+        color: #000000;
     }
 }
 
@@ -333,7 +397,7 @@ aside {
 }
 
 .text-primary {
-    color: #f05f40;
+    color: #000000;
 }
 
 .no-gutter > [class*=col-] {
@@ -395,9 +459,9 @@ fieldset[disabled] .btn-default.active {
 }
 
 .btn-primary {
-    border-color: #f05f40;
+    border-color: #000000;
     color: #fff;
-    background-color: #f05f40;
+    background-color: #000000;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -438,12 +502,12 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-    border-color: #f05f40;
-    background-color: #f05f40;
+    border-color: #000000;
+    background-color: #000000;
 }
 
 .btn-primary .badge {
-    color: #f05f40;
+    color: #000000;
     background-color: #fff;
 }
 
